@@ -1,0 +1,66 @@
+<html>
+<head> <center><h1> SIGNUP </center> </h1> </head>
+<style>
+body {
+background-color:lightblue;
+margin:50px 0px;padding:0px;
+text-align:center;
+align:center;
+}
+div.form{
+width:100%;
+display:block;
+text-align:center;
+}
+form
+{
+display:inline-block;
+margin-left:auto;
+margin-right:auto;
+text-align:left;
+font-size:20px;
+}
+</style>
+</head>
+	<script type="text/javascript">
+function checkpass()
+{
+if(document.signup.password.value!=document.signup.repeatpassword.value)
+{
+alert('Password and Repeat Password field does not match');
+document.signup.repeatpassword.focus();
+return false;
+}
+return true;
+} 
+
+</script>
+
+<body>
+<div class="form">
+<form action="signup.php" method="post" name="signup">
+<h2>
+<center><br>
+
+<input type="text" name="username" placeholder="Full Name" required><br>
+<br>
+<input type="email" name="email" placeholder="Email-id"required><br>
+<br>
+
+
+<input type="text" name="number" placeholder="Mobile Number" maxlength="10" pattern="[0-9]{10}"><br>
+<br>
+
+<input type="password" name="password" placeholder="Password" required><br>
+<br>
+<input type="password" name="re_password" placeholder="Repeat Password" required ><br>
+<br>
+<input type ="submit" value="submit">
+<br>
+<br>
+<a href="login.html">home</a>
+</center>
+</form>
+</div>
+</body>
+</html> 
